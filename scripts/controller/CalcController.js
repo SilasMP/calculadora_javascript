@@ -29,6 +29,9 @@ class CalcController {
         let buttons = document.querySelectorAll('#buttons > g, #parts > g');
 
         buttons.forEach(btn =>{
+            btn.addEventListener('mouseover', event =>{
+                btn.style.cursor = 'pointer';                
+            })
             btn.addEventListener('click', event =>{
                 this.inputs(btn.className.baseVal.replace('btn-',''));                
             })
